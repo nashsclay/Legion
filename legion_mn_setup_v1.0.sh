@@ -221,8 +221,10 @@ function create_swap() {
     chmod 600 $SWAPFILE
     mkswap $SWAPFILE
     swapon -a $SWAPFILE
+    read -p "Stop. It worked"
  else
   echo -e "${GREEN}The server running with at least 2G of RAM, or a SWAP file is already in place.${NC}"
+  read -p "It failed."
  fi
  clear
 }
