@@ -196,6 +196,7 @@ apt-get update >/dev/null 2>&1
 apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" make software-properties-common \
 build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libboost-all-dev \
 libdb4.8-dev libdb4.8++-dev libminiupnpc-dev libzmq3-dev git nano tmux
+read -p "Find libdb"
 apt-get install -y libgmp3-dev >/dev/null 2>&1
 if [ "$?" -gt "0" ];
   then
